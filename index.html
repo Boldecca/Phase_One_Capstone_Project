@@ -38,3 +38,40 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Main Content -->
+  <div class="flex-1">
+    <section class="flex flex-col items-center text-center mt-20 px-4">
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 flex items-center gap-1">⚡ Discover Your Next Read</p>
+      <h2 class="text-4xl sm:text-6xl font-extrabold mb-4">Explore Millions of Books</h2>
+      <p class="text-gray-600 dark:text-gray-300 max-w-xl mb-8">
+        Search through a vast collection of books, save your favorites, and discover new stories from around the world.
+      </p>
+
+      <!-- Search Bar -->
+      <div class="flex w-full max-w-xl items-center mb-12">
+        <input id="searchInput" type="text" placeholder="Search books by title, author, or subject..."
+          class="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-black dark:focus:ring-white bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+        <button id="searchBtn" class="bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-r-lg hover:bg-gray-800 dark:hover:bg-gray-200">
+          Search
+        </button>
+      </div>
+
+      <!-- Loading State -->
+      <div id="loadingState" class="hidden mb-8">
+        <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-black dark:border-white mx-auto"></div>
+        <p class="mt-4 text-gray-600 dark:text-gray-400">Loading books...</p>
+      </div>
+
+      <!-- Books Grid -->
+      <div class="w-full px-6 pb-20">
+        <h3 class="text-2xl font-semibold mb-6 text-left" id="booksTitle">Trending Books</h3>
+        <div id="booksContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"></div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 dark:bg-gray-900 text-center py-4">
+    <p class="text-gray-400 text-sm">© 2025 Book Explorer. Built with ❤️ and Tailwind CSS.</p>
+  </footer>
