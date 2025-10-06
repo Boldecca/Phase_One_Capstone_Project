@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Explorer - About</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' };
+  </script>
+</head>
+
+<body class="flex flex-col min-h-screen bg-white text-gray-900 dark:bg-black dark:text-white font-sans transition-colors duration-300">
+
+  <!-- Navbar -->
+  <header class="flex items-center justify-between px-6 py-4 border-b border-gray-300 dark:border-gray-700 relative">
+    <div class="flex items-center space-x-2">
+      <span class="text-2xl">📖</span>
+      <h1 class="text-xl font-semibold">Book Explorer</h1>
+    </div>
+    <nav>
+      <!-- Desktop Menu -->
+      <ul id="desktopMenu" class="hidden md:flex space-x-4 items-center">
+        <li><a href="index.html" class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white px-4 py-1.5 rounded-lg">Home</a></li>
+        <li><a href="favorites.html" class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center gap-1">♡ Favorites</a></li>
+        <li><a href="about.html" class="bg-black dark:bg-white text-white dark:text-black px-4 py-1.5 rounded-lg flex items-center gap-1">ℹ About</a></li>
+        <li><button id="darkModeBtn" class="ml-4 px-3 py-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-300 dark:border-gray-700">🌙</button></li>
+      </ul>
+
+      <!-- Mobile Menu Button -->
+      <button id="menuBtn" class="md:hidden px-3 py-2 border rounded text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">☰</button>
+
+      <!-- Mobile Menu -->
+      <ul id="mobileMenu" class="absolute top-full right-6 mt-2 w-40 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow-md hidden flex-col space-y-2 p-2 z-50">
+        <li><a href="index.html" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+        <li><a href="favorites.html" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">♡ Favorites</a></li>
+        <li><a href="about.html" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">ℹ About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="flex-1">
+    <section class="flex flex-col justify-center items-center text-center px-6 py-20 min-h-[70vh]">
+      <div class="max-w-3xl">
+        <h3 class="text-4xl sm:text-5xl font-bold mb-8">About Book Explorer</h3>
+        <p class="text-xl sm:text-2xl mb-6"><strong>Book Explorer</strong> helps readers discover millions of books from all over the world.</p>
+        <p class="text-xl sm:text-2xl mb-6">Powered by the <a href="https://openlibrary.org" target="_blank" class="text-blue-600 hover:underline font-semibold">Open Library API</a>.</p>
+        <p class="text-xl sm:text-2xl mb-6">Built using <strong>JavaScript</strong> and <strong>Tailwind CSS</strong>.</p>
+        <p class="text-xl sm:text-2xl">📚 Whether you're a passionate reader or just exploring — Book Explorer is your gateway to stories.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 dark:bg-gray-900 text-center py-4">
+    <p class="text-gray-400 text-sm">© 2025 Book Explorer. Built with ❤️ and Tailwind CSS.</p>
+  </footer>
