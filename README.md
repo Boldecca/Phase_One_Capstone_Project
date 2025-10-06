@@ -47,7 +47,7 @@ Built with **HTML, Tailwind CSS, and JavaScript (ES6 modules)**, this project em
 ![Favorites Page Screenshot]![alt text](image-1.png)
 
 ### About Page
-![About Page Screenshot]![alt text](image-2.png)
+![About Page Screenshot]![alt text](image-3.png)
 
 ---
 
@@ -55,9 +55,15 @@ Built with **HTML, Tailwind CSS, and JavaScript (ES6 modules)**, this project em
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/book-explorer.git
+   git clone https://github.com/Boldecca/Phase_One_Capstone_Project.git
 .
+---
 
+2. **Deployment**
+
+live mode:  https://boldecca.github.io/Phase_One_Capstone_Project/
+
+---
 
 Book-Explorer/
 │
