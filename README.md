@@ -61,16 +61,18 @@ live mode:  https://boldecca.github.io/Phase_One_Capstone_Project/
 
 ---
 
-Book-Explorer/
+
+## **Phase_One_Capstone_project/
 │
-├── index.html           # Homepage
-├── favorites.html       # Favorites page
-├── about.html           # About page
-├── main.js              # Main app logic
-├── fetchBooks.js        # API Manager
-├── favorites.js         # Favorites Manager
-├── style.css            # Optional custom styles
+├── index.html
+├── about.html
+├── favorites.html
+├── js/
+│   ├── main.js
+│   ├── fetchBooks.js
+│   └── favorites.js
 └── README.md
+
 
 Contact
 
