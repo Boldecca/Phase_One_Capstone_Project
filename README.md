@@ -1,10 +1,6 @@
 # 📚 Book Explorer
 
 > **A responsive and interactive web app to explore, search, and favorite books using the Open Library API.**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
-[![GitHub stars](https://img.shields.io/github/stars/your-username/book-explorer?style=social)](https://github.com/your-username/book-explorer/stargazers)  
-
 ---
 
 ## **Project Overview**
