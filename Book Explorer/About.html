@@ -180,3 +180,32 @@
   </div>
 </footer>
 
+<!-- JavaScript for Dark Mode -->
+  <script>
+    // Initialize dark mode
+    const darkModeBtn = document.getElementById("darkModeBtn");
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    
+    // Load dark mode preference
+    const isDark = localStorage.getItem("darkMode") === "true";
+    if (isDark) {
+      document.documentElement.classList.add("dark");
+      darkModeBtn.textContent = "☀️";
+    }
+
+    // Dark mode toggle
+    darkModeBtn.addEventListener("click", () => {
+      const isDarkMode = document.documentElement.classList.toggle("dark");
+      darkModeBtn.textContent = isDarkMode ? "☀️" : "🌙";
+      localStorage.setItem("darkMode", isDarkMode);
+    });
+
+    // Mobile menu toggle
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>
