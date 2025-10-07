@@ -41,7 +41,7 @@ Built with **HTML, Tailwind CSS, and JavaScript (ES6 modules)**, this project em
 ## **Screenshots**
 
 ### Home Page
-![Home Page Screenshot]![alt text](image-7.png)
+![Home Page Screenshot]![alt text](image-10.png)
 
 ### Favorites Page
 ![Favorites Page Screenshot]![alt text](image-8.png)

@@ -2,8 +2,9 @@
 // MAIN APP
 // ============================================
 
-import { fetchTrendingBooks, searchBooks, displayBooks } from "./fetchbooks.js";
+import { fetchTrendingBooks, searchBooks, fetchBooksByCategory, displayBooks } from "./fetchbooks.js";
 
+// ===== Dark Mode =====
 export function initDarkMode() {
   const btn = document.getElementById("darkModeBtn");
   if (!btn) return;
@@ -19,6 +20,7 @@ export function initDarkMode() {
   });
 }
 
+// ===== Mobile Menu =====
 export function initMobileMenu() {
   const btn = document.getElementById("menuBtn");
   const menu = document.getElementById("mobileMenu");
@@ -27,6 +29,7 @@ export function initMobileMenu() {
   btn.addEventListener("click", () => menu.classList.toggle("hidden"));
 }
 
+// ===== Search =====
 export function initSearch() {
   const btn = document.getElementById("searchBtn");
   const input = document.getElementById("searchInput");
@@ -38,6 +41,7 @@ export function initSearch() {
   });
 }
 
+// ===== Load & Display Functions =====
 export async function searchAndDisplayBooks(query) {
   const loading = document.getElementById("loadingState");
   const container = document.getElementById("booksContainer");
@@ -80,10 +84,39 @@ export async function loadTrendingBooks() {
   }
 }
 
-// Auto-init
+// ===== Categories =====
+export function initCategories() {
+  const categoryButtons = document.querySelectorAll("[data-category]");
+  const titleEl = document.getElementById("booksTitle");
+  const loading = document.getElementById("loadingState");
+  const container = document.getElementById("booksContainer");
+
+  categoryButtons.forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const category = btn.dataset.category;
+      if (!category || !loading || !container || !titleEl) return;
+
+      loading.classList.remove("hidden");
+      container.innerHTML = "";
+      titleEl.textContent = `Category: ${category}`;
+
+      try {
+        const books = await fetchBooksByCategory(category);
+        displayBooks(books);
+      } catch (err) {
+        container.innerHTML = `<p class="text-center text-red-500 col-span-full">Failed to load category books.</p>`;
+      } finally {
+        loading.classList.add("hidden");
+      }
+    });
+  });
+}
+
+// ===== Auto-init =====
 document.addEventListener("DOMContentLoaded", () => {
   initDarkMode();
   initMobileMenu();
   initSearch();
+  initCategories(); // category buttons
   loadTrendingBooks();
 });
