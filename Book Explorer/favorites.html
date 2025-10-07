@@ -118,3 +118,35 @@
     </p>
   </div>
 </footer>
+
+<!-- ES6 Module -->
+  <script type="module">
+    import { renderFavorites } from './favorites.js';
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // ---- Dark Mode ----
+      const darkModeBtn = document.getElementById("darkModeBtn");
+      const isDark = localStorage.getItem("darkMode") === "true";
+
+      if (isDark) {
+        document.documentElement.classList.add("dark");
+        darkModeBtn.textContent = "☀️";
+      }
+
+      darkModeBtn.addEventListener("click", () => {
+        const isDarkMode = document.documentElement.classList.toggle("dark");
+        darkModeBtn.textContent = isDarkMode ? "☀️" : "🌙";
+        localStorage.setItem("darkMode", isDarkMode);
+      });
+
+      // ---- Mobile Menu ----
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("hidden"));
+
+      // ---- Render Favorites ----
+      renderFavorites();
+    });
+  </script>
+</body>
+</html>
