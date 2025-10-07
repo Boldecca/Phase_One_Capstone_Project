@@ -12,7 +12,7 @@
 
 <body class="flex flex-col min-h-screen bg-white text-gray-900 dark:bg-black dark:text-white font-sans transition-colors duration-300">
 
-     <!-- Navbar -->
+  <!-- Navbar -->
   <header class="flex items-center justify-between px-6 py-4 border-b border-gray-300 dark:border-gray-700 relative">
     <div class="flex items-center space-x-2">
       <span class="text-2xl">📖</span>
@@ -40,7 +40,9 @@
   </header>
 
   <!-- Main Content -->
-  <div class="flex-1">
+  <main class="flex-1">
+
+    <!-- Home Section -->
     <section class="flex flex-col items-center text-center mt-20 px-4">
       <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 flex items-center gap-1">⚡ Discover Your Next Read</p>
       <h2 class="text-4xl sm:text-6xl font-extrabold mb-4">Explore Millions of Books</h2>
@@ -63,90 +65,109 @@
         <p class="mt-4 text-gray-600 dark:text-gray-400">Loading books...</p>
       </div>
 
-      <!-- Books Grid -->
+      <!-- Trending Books Grid -->
       <div class="w-full px-6 pb-20">
         <h3 class="text-2xl font-semibold mb-6 text-left" id="booksTitle">Trending Books</h3>
         <div id="booksContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"></div>
       </div>
     </section>
-  </div>
+
+    <!-- Categories Section -->
+    <section id="categoriesSection" class="mt-16 px-6 pb-20">
+      <h3 class="text-2xl font-semibold mb-6 text-center">📚 Browse by Category</h3>
+
+      <!-- Category Buttons -->
+      <div id="categoryButtons" class="flex flex-wrap justify-center gap-3 mb-10">
+        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="fiction">Fiction</button>
+        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="science">Science</button>
+        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="history">History</button>
+        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="romance">Romance</button>
+        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="fantasy">Fantasy</button>
+        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="mystery">Mystery</button>
+      </div>
+
+      <!-- Category Books Grid -->
+      <div id="categoryBooksContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"></div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
-<footer class="bg-gray-900 text-gray-300 border-t border-gray-700 mt-12">
-  <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-    
-    <!-- Brand / About -->
-    <div>
-      <h3 class="text-xl font-semibold mb-3 text-white flex items-center gap-2">
-        📖 Book Explorer
-      </h3>
-      <p class="text-sm leading-relaxed">
-        Discover millions of books, explore new stories, and save your favorites — all in one place.
-      </p>
-      <p class="mt-3 text-sm text-gray-400">
-        Made with ❤️ in Rwanda
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div>
-      <h4 class="text-lg font-semibold mb-3 text-white">Quick Links</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="#" class="hover:text-white transition">Home</a></li>
-        <li><a href="#" class="hover:text-white transition">Favorites</a></li>
-        <li><a href="#" class="hover:text-white transition">About</a></li>
-      </ul>
-    </div>
-
-    <!-- Newsletter -->
-    <div>
-      <h4 class="text-lg font-semibold mb-3 text-white">Stay Updated</h4>
-      <p class="text-sm mb-3">Get book recommendations and updates straight to your inbox.</p>
-      <form class="flex items-center">
-        <input
-          type="email"
-          placeholder="Enter your email"
-          class="flex-1 px-3 py-2 rounded-l-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm"
-          required
-        />
-        <button
-          type="submit"
-          class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-r-lg text-sm font-medium"
-        >
-          Subscribe
-        </button>
-      </form>
-    </div>
-
-    <!-- Social & Info -->
-    <div>
-      <h4 class="text-lg font-semibold mb-3 text-white">Connect With Us</h4>
-      <div class="flex space-x-4 mb-4">
-        <a href="#" class="hover:text-blue-400 transition text-xl">🌐</a>
-        <a href="#" class="hover:text-pink-400 transition text-xl">📸</a>
-        <a href="#" class="hover:text-blue-500 transition text-xl">🐦</a>
-        <a href="#" class="hover:text-red-500 transition text-xl">▶️</a>
+  <footer class="bg-gray-900 text-gray-300 border-t border-gray-700 mt-12">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      
+      <!-- Brand / About -->
+      <div>
+        <h3 class="text-xl font-semibold mb-3 text-white flex items-center gap-2">
+          📖 Book Explorer
+        </h3>
+        <p class="text-sm leading-relaxed">
+          Discover millions of books, explore new stories, and save your favorites — all in one place.
+        </p>
+        <p class="mt-3 text-sm text-gray-400">
+          Made with ❤️ in Rwanda
+        </p>
       </div>
-      <p class="text-xs text-gray-400">
-        Built with <strong>JavaScript</strong> and <strong>Tailwind CSS</strong>.<br>
-        Version 1.0.0 • © 2025 Book Explorer
-      </p>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-white">Quick Links</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white transition">Home</a></li>
+          <li><a href="#" class="hover:text-white transition">Favorites</a></li>
+          <li><a href="#" class="hover:text-white transition">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Newsletter -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-white">Stay Updated</h4>
+        <p class="text-sm mb-3">Get book recommendations and updates straight to your inbox.</p>
+        <form class="flex items-center">
+          <input
+            type="email"
+            placeholder="Enter your email"
+            class="flex-1 px-3 py-2 rounded-l-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 text-sm"
+            required
+          />
+          <button
+            type="submit"
+            class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-r-lg text-sm font-medium"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
+      <!-- Social & Info -->
+      <div>
+        <h4 class="text-lg font-semibold mb-3 text-white">Connect With Us</h4>
+        <div class="flex space-x-4 mb-4">
+          <a href="#" class="hover:text-blue-400 transition text-xl">🌐</a>
+          <a href="#" class="hover:text-pink-400 transition text-xl">📸</a>
+          <a href="#" class="hover:text-blue-500 transition text-xl">🐦</a>
+          <a href="#" class="hover:text-red-500 transition text-xl">▶️</a>
+        </div>
+        <p class="text-xs text-gray-400">
+          Built with <strong>JavaScript</strong> and <strong>Tailwind CSS</strong>.<br>
+          Version 1.0.0 • © 2025 Book Explorer
+        </p>
+      </div>
+
     </div>
 
-  </div>
-
-  <!-- Bottom Bar -->
-  <div class="bg-gray-800 text-center py-3 border-t border-gray-700">
-    <p class="text-sm text-gray-400">
-      © 2025 Book Explorer. All rights reserved.
-    </p>
-  </div>
-</footer>
+    <!-- Bottom Bar -->
+    <div class="bg-gray-800 text-center py-3 border-t border-gray-700">
+      <p class="text-sm text-gray-400">
+        © 2025 Book Explorer. All rights reserved.
+      </p>
+    </div>
+  </footer>
 
   <!-- ES6 Modules -->
   <script type="module" src="favorites.js"></script>
   <script type="module" src="fetchBooks.js"></script>
   <script type="module" src="main.js"></script>
 
-  </body>
+</body>
 </html>
