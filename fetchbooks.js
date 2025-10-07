@@ -4,31 +4,58 @@
 
 import { addToFavorites } from "./favorites.js";
 
+/**
+ * Fetch trending books
+ * @returns {Promise<Array>}
+ */
 export async function fetchTrendingBooks() {
-  try {
-    const res = await fetch('https://openlibrary.org/search.json?q=bestseller&limit=18');
-    const data = await res.json();
-    return data.docs;
-  } catch (err) {
-    console.error("Error fetching trending books:", err);
-    return [];
-  }
+  return fetchBooksByQuery("bestseller");
 }
 
+/**
+ * Fetch books by search query
+ * @param {string} query
+ * @returns {Promise<Array>}
+ */
 export async function searchBooks(query) {
+  if (!query || query.trim() === "") return fetchTrendingBooks();
+  return fetchBooksByQuery(query);
+}
+
+/**
+ * Fetch books by category
+ * @param {string} category
+ * @returns {Promise<Array>}
+ */
+export async function fetchBooksByCategory(category) {
+  if (!category || category.trim() === "") return fetchTrendingBooks();
+  return fetchBooksByQuery(category);
+}
+
+/**
+ * Generic fetch function for Open Library
+ * @param {string} query
+ * @returns {Promise<Array>}
+ */
+async function fetchBooksByQuery(query) {
   try {
     const res = await fetch(`https://openlibrary.org/search.json?q=${encodeURIComponent(query)}&limit=18`);
     const data = await res.json();
-    return data.docs;
+    return data.docs || [];
   } catch (err) {
-    console.error("Error searching books:", err);
+    console.error(`Error fetching books for "${query}":`, err);
     return [];
   }
 }
 
+/**
+ * Display books in the container
+ * @param {Array} books
+ */
 export function displayBooks(books) {
   const container = document.getElementById("booksContainer");
   if (!container) return;
+
   container.innerHTML = "";
 
   if (!books.length) {
@@ -39,6 +66,11 @@ export function displayBooks(books) {
   books.forEach(book => container.appendChild(createBookCard(book)));
 }
 
+/**
+ * Create a single book card element
+ * @param {Object} book
+ * @returns {HTMLElement}
+ */
 function createBookCard(book) {
   const coverId = book.cover_i;
   const imgSrc = coverId

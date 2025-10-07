@@ -9,7 +9,6 @@
     tailwind.config = { darkMode: 'class' };
   </script>
 </head>
-
 <body class="flex flex-col min-h-screen bg-white text-gray-900 dark:bg-black dark:text-white font-sans transition-colors duration-300">
 
   <!-- Navbar -->
@@ -19,30 +18,23 @@
       <h1 class="text-xl font-semibold">Book Explorer</h1>
     </div>
     <nav>
-      <!-- Desktop Menu -->
       <ul id="desktopMenu" class="hidden md:flex space-x-4 items-center">
-        <li><a href="index.html" class="bg-black dark:bg-white text-white dark:text-black px-4 py-1.5 rounded-lg">Home</a></li>
-        <li><a href="favorites.html" class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center gap-1">♡ Favorites</a></li>
-        <li><a href="about.html" class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center gap-1">ℹ About</a></li>
+        <li><a href="#" class="bg-black dark:bg-white text-white dark:text-black px-4 py-1.5 rounded-lg">Home</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center gap-1">♡ Favorites</a></li>
+        <li><a href="#" class="text-gray-600 dark:text-gray-300 hover:text-black dark:hover:text-white flex items-center gap-1">ℹ About</a></li>
         <li><button id="darkModeBtn" class="ml-4 px-3 py-1.5 rounded-lg border border-gray-300 text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 dark:text-gray-300 dark:border-gray-700">🌙</button></li>
       </ul>
-
-      <!-- Mobile Menu Button -->
       <button id="menuBtn" class="md:hidden px-3 py-2 border rounded text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800">☰</button>
-
-      <!-- Mobile Menu -->
       <ul id="mobileMenu" class="absolute top-full right-6 mt-2 w-40 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded shadow-md hidden flex-col space-y-2 p-2 z-50">
-        <li><a href="index.html" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
-        <li><a href="favorites.html" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">♡ Favorites</a></li>
-        <li><a href="about.html" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">ℹ About</a></li>
+        <li><a href="#" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">Home</a></li>
+        <li><a href="#" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">♡ Favorites</a></li>
+        <li><a href="#" class="block w-full text-left px-2 py-1 rounded hover:bg-gray-100 dark:hover:bg-gray-700">ℹ About</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Main Content -->
-  <main class="flex-1">
-
-    <!-- Home Section -->
+  <div class="flex-1">
     <section class="flex flex-col items-center text-center mt-20 px-4">
       <p class="text-sm text-gray-500 dark:text-gray-400 mb-2 flex items-center gap-1">⚡ Discover Your Next Read</p>
       <h2 class="text-4xl sm:text-6xl font-extrabold mb-4">Explore Millions of Books</h2>
@@ -65,32 +57,28 @@
         <p class="mt-4 text-gray-600 dark:text-gray-400">Loading books...</p>
       </div>
 
-      <!-- Trending Books Grid -->
-      <div class="w-full px-6 pb-20">
+      <!-- Books Grid -->
+      <div class="w-full px-6 pb-12">
         <h3 class="text-2xl font-semibold mb-6 text-left" id="booksTitle">Trending Books</h3>
         <div id="booksContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"></div>
       </div>
     </section>
 
     <!-- Categories Section -->
-    <section id="categoriesSection" class="mt-16 px-6 pb-20">
-      <h3 class="text-2xl font-semibold mb-6 text-center">📚 Browse by Category</h3>
-
-      <!-- Category Buttons -->
-      <div id="categoryButtons" class="flex flex-wrap justify-center gap-3 mb-10">
-        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="fiction">Fiction</button>
-        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="science">Science</button>
-        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="history">History</button>
-        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="romance">Romance</button>
-        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="fantasy">Fantasy</button>
-        <button class="category-btn bg-gray-200 dark:bg-gray-800 px-4 py-2 rounded-lg hover:bg-black hover:text-white" data-category="mystery">Mystery</button>
+    <section id="categoriesSection" class="bg-gray-100 dark:bg-gray-900 py-12 px-6">
+      <div class="max-w-7xl mx-auto text-center">
+        <h3 class="text-2xl sm:text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">Browse by Category</h3>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <button class="category-btn bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-2 px-3 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition" data-category="Fiction">Fiction</button>
+          <button class="category-btn bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-2 px-3 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition" data-category="Science">Science</button>
+          <button class="category-btn bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-2 px-3 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition" data-category="History">History</button>
+          <button class="category-btn bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-2 px-3 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition" data-category="Biography">Biography</button>
+          <button class="category-btn bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-2 px-3 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition" data-category="Romance">Romance</button>
+          <button class="category-btn bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 py-2 px-3 rounded shadow hover:bg-gray-200 dark:hover:bg-gray-700 transition" data-category="Fantasy">Fantasy</button>
+        </div>
       </div>
-
-      <!-- Category Books Grid -->
-      <div id="categoryBooksContainer" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6"></div>
     </section>
-
-  </main>
+  </div>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-300 border-t border-gray-700 mt-12">
@@ -168,6 +156,5 @@
   <script type="module" src="favorites.js"></script>
   <script type="module" src="fetchBooks.js"></script>
   <script type="module" src="main.js"></script>
-
 </body>
 </html>
