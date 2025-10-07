@@ -51,7 +51,7 @@ Built with **HTML, Tailwind CSS, and JavaScript (ES6 modules)**, this project em
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/Boldecca/Phase_One_Capstone_Project.git
+   git clone https://github.com/Boldecca/Phase_One_Capstone_project.git
 .
 ---
 
