@@ -2,7 +2,7 @@
 // MAIN APP
 // ============================================
 
-import { fetchTrendingBooks, searchBooks, fetchBooksByCategory, displayBooks } from "./fetchbooks.js";
+import { fetchTrendingBooks, searchBooks, fetchBooksByCategory, displayBooks } from "../fetchbooks.js";
 
 // ===== Dark Mode =====
 export function initDarkMode() {
