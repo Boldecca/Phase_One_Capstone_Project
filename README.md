@@ -2,11 +2,14 @@
 
 > **A responsive and interactive web app to explore, search, and favorite books using the Open Library API.**
 
+<<<<<<< Updated upstream
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 [![GitHub stars](https://img.shields.io/github/stars/your-username/book-explorer?style=social)](https://github.com/your-username/book-explorer/stargazers)  
 
 ---
 
+=======
+>>>>>>> Stashed changes
 ## **Project Overview**
 
 **Book Explorer** is a responsive and interactive web application that lets users **browse, search, and favorite books** using data from the **Open Library API**.  
@@ -61,7 +64,11 @@ Built with **HTML, Tailwind CSS, and JavaScript (ES6 modules)**, this project em
 
 2. **Deployment**
 
+<<<<<<< Updated upstream
 live mode:  https://boldecca.github.io/Phase_One_Capstone_Project/
+=======
+live mode:  https://boldecca.github.io/Phase_One_Capstone_project/
+>>>>>>> Stashed changes
 
 ---
 
