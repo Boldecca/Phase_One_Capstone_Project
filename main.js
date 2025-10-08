@@ -1,6 +1,4 @@
-// ============================================
-// MAIN APP
-// ============================================
+// main.js
 
 import { fetchTrendingBooks, searchBooks, fetchBooksByCategory, displayBooks } from "../fetchbooks.js";
 

@@ -1,6 +1,4 @@
-// ============================================
-// MODULE: Favorites Manager
-// ============================================
+// favorites.js
 
 // Get favorites from localStorage
 export function getFavorites() {

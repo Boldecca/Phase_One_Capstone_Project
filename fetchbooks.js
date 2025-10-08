@@ -1,7 +1,4 @@
-// ============================================
-// MODULE: API Manager (Open Library)
-// ============================================
-
+// fetchbooks.js
 import { addToFavorites } from "./favorites.js";
 
 /**
