@@ -2,7 +2,7 @@
 // MODULE: API Manager (Open Library)
 // ============================================
 
-import { addToFavorites } from "../favorites.js";
+import { addToFavorites } from "../lab 2/favorites.js";
 
 /**
  * Fetch trending books
